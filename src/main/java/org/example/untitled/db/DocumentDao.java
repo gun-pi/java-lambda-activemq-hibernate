@@ -6,11 +6,11 @@ import org.hibernate.Transaction;
 public class DocumentDao {
 
     public Long save(DocumentEntity documentEntity) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
-        final Long id = (Long) session.save(documentEntity);
-        tx.commit();
-        session.close();
-        return id;
+        try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
+            Transaction transaction = session.beginTransaction();
+            final Long id = (Long) session.save(documentEntity);
+            transaction.commit();
+            return id;
+        }
     }
 }
