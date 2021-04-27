@@ -10,7 +10,7 @@
         <property name="hibernate.connection.password">exampleexample</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
         <property name="hibernate.jdbc.use_get_generated_keys">true</property>
         <property name="hibernate.jdbc.use_scrollable_resultset">true</property>

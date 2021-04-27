@@ -15,14 +15,15 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
+    implementation 'com.amazonaws:aws-lambda-java-events:3.1.0'
+    runtimeOnly 'com.amazonaws:aws-lambda-java-log4j2:1.2.0'
+
     implementation "org.apache.activemq:activemq-client:5.15.14"
     implementation "org.apache.activemq:activemq-pool:5.15.14"
     implementation group: 'org.glassfish.main.javaee-api', name: 'javax.jms', version: '3.1.2.2'
 
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.19'
     implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.30.Final'
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
-    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
 }
 
 test {
